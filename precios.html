@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <title>Precios - Recetas Culinarias</title>
+  </head>
+  <body>
+    <header id="inicio">
+      <nav>
+        <a href="index.html" class="logo">Recetas Culinarias</a>
+        <a href="index.html">Inicio</a>
+        <a href="precios.html">Precios</a>
+        <a href="faq.html" id="icono-faq" aria-label="Preguntas frecuentes">
+          <img src="img/faq.svg" alt="" width="24" height="24" />
+        </a>
+      </nav>
+      <button id="toggle-tema" onclick="toggleTema()">🌙 Modo oscuro</button>
+    </header>
+
+    <main>
+      <section id="precios">
+        <div id="content-precios">
+          <h1>Planes y precios</h1>
+          <p>Elige el plan que mejor se ajuste a tu necesidad.</p>
+        </div>
+        <div class="planes">
+          <article class="plan">
+            <h2>Free</h2>
+            <p class="precio">$0</p>
+            <ul>
+              <li>Feature básico 1</li>
+              <li>Feature básico 2</li>
+            </ul>
+            <a href="#" class="btn">Empezar gratis</a>
+          </article>
+          <article class="plan">
+            <h2>Starter</h2>
+            <p class="precio">$9/mes</p>
+            <ul>
+              <li>Todo lo del Free</li>
+              <li>Feature starter 1</li>
+            </ul>
+            <a href="#" class="btn">Probar Starter</a>
+          </article>
+          <article class="plan plan-popular">
+            <span class="badge">⭐ Más popular</span>
+            <h2>Pro</h2>
+            <p class="precio">$19/mes</p>
+            <ul>
+              <li>Todo lo del Free</li>
+              <li>Feature pro 1</li>
+              <li>Feature pro 2</li>
+            </ul>
+            <a href="#" class="btn">Probar 14 días</a>
+          </article>
+          <article class="plan">
+            <h2>Enterprise</h2>
+            <p class="precio">$99/mes</p>
+            <ul>
+              <li>Todo lo del Pro</li>
+              <li>Feature enterprise 1</li>
+              <li>Soporte dedicado</li>
+            </ul>
+            <a href="#" class="btn">Contactar ventas</a>
+          </article>
+        </div>
+      </section>
+      <section class="clientes">
+        <h2>Marcas que confían en nosotros</h2>
+        <div class="logos">
+          <div class="logo-cliente">ACME</div>
+          <div class="logo-cliente">TechCo</div>
+          <div class="logo-cliente">StartupX</div>
+          <div class="logo-cliente">BigCorp</div>
+          <div class="logo-cliente">GlobalInc</div>
+          <div class="logo-cliente">FutureLab</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contacto: yosidelhuamanimucha@gmail.com</p>
+      <p>Numero: 981370653</p>
+    </footer>
+    <div class="footer-legal">
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Política de privacidad</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
