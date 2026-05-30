@@ -7,35 +7,63 @@
     <title>Recetas culinarias</title>
 </head>
 <body>
-    <header>
+    <header id="inicio">
   <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Producto</a>
-    <a href="#">Contacto</a>
+  <a href="#" class="logo">Recetas culinarias</a>
+  <a href="#inicio">Inicio</a>
+  <a href="#productos">Producto</a>
+  <a href="#contacto-footer">Contacto</a>
   </nav>
   <button id="toggle-tema" onclick="toggleTema()">🌙 Modo oscuro</button>
 </header>
 <main>
   <section id="hero">
-    <h1>Recetas de diversos alimentos</h1>
-    <p>Puedes encontrar recetas de diferentes platillos interesantes</p>
+    <h1>Gastronomia Internacional</h1>
+    <p>Puedes encontrar recetas de todo tipo de alimentos</p>
     <img src="img/hero.jpg" alt="Platillo de trucha con lechuga, cebolla, choclo sancochado y jugo de limon, rocoto y diferentes aderezos">
   </section>
-  <section>
-    <h2>Características</h2>
-    <ul>
-      <li>Ingredientes</li>
-      <li>Metodos de Preparacion</li>
-      <li>Cantidad de Calorias y Tiempo de Coccion</li>
-    </ul>
+  <section id="productos">
+      <h2>Países Culinarios</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="img/icono-1.svg" alt="" width="48" height="48">
+      <h3>Gastronomia Peruana</h3>
+      <p>Te enseñamos los mejores platos Peruanos.</p>
+    </article>
+    <article class="card">
+      <img src="img/icono-2.svg" alt="" width="48" height="48">
+      <h3>Gastronomia Española</h3>
+      <p>Te enseñamos los mejores platos Españoles.</p>
+    </article>
+    <article class="card">
+      <img src="img/icono-3.svg" alt="" width="48" height="48">
+      <h3>Gastronomia Japonesa</h3>
+      <p>Te enseñamos los mejores platos Japoneses.</p>
+    </article>
+    <article class="card">
+        <img src="img/icono-4.svg" alt="" width="48" height="48">
+        <h3>Gastronomia China</h3>
+        <p>Te enseñamos los mejores platos Chinos</p>
+    </article>
+  </div>
   </section>
   <section>
-    <h3>Preguntas Frecuentes</h3>
+    <h4>Preguntas Frecuentes</h4>
     <p>Usuario 1: Se puede calcular las calorias de los diversos platillos?</p>
     <p>Usuario 2: De cuantos paises se pueden encontrar las recetas?</p>
   </section>
-  <section>
-    <h4>Contactanos</h4>
+  <section id="galeria">
+  <h2>Galería</h2>
+  <div class="galeria">
+    <img src="img/g1.jpg" alt="Comida Peruana">
+    <img src="img/g2.jpg" alt="Comida Española">
+    <img src="img/g3.jpg" alt="Comida Japonesa">
+    <img src="img/g4.jpg" alt="Comida China">
+  </div>
+</section>
+  <section id="contacto">
+     <h4 onclick="toggleContacto()" style="cursor:pointer;">Contáctanos ▼</h4>
+  <div id="contacto-form">
     <form>
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre">
@@ -57,9 +85,10 @@
 
     <button type="submit">Enviar</button>
   </form>
+  </div>
   </section>
 </main>
-<footer>
+<footer id="contacto-footer">
   <p>Contacto: yosidelhuamanimucha@gmail.com</p>
   <p>Numero: 981370653</p>
   <a href="#" aria-label="Síguenos en Facebook">
@@ -74,7 +103,11 @@
   <a href="#" aria-label="Síguenos en Twitter">
     <img src="img/twitter.svg" alt="" width="32" height="32">
   </a>
-</footer>
+  </footer>
+<div class="footer-legal">
+  <a href="#">Términos y condiciones</a>
+  <a href="#">Política de privacidad</a>
+</div>
   <script src="script.js"></script>
 </body>
 </html>

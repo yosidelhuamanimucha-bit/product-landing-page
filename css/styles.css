@@ -3,31 +3,194 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-  color: #1a1a1a;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
 }
+ 
+/* ===== HEADER ===== */
 header nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
 }
-body {
-  background-color: #ffffff;
-  color: #000000;
-  transition: background-color 0.3s, color 0.3s;
+ 
+header nav .logo {
+  flex-grow: 1;
 }
-
-/* modo oscuro */
+ 
+nav a {
+  text-decoration: none;
+  color: purple;
+  font-weight: 700;
+}
+ 
+#toggle-tema {
+  cursor: pointer;
+  padding: 6px 12px;
+  margin: 0 16px 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: transparent;
+  font-size: 14px;
+}
+ 
+/* ===== HERO ===== */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  text-align: center;
+}
+ 
+#hero img {
+  max-width: 100%;
+  height: auto;
+}
+ 
+/* ===== TARJETAS ===== */
+#caracteristicas {
+  padding: 32px;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+ 
+.card {
+  flex-basis: auto;
+  flex-grow: 1;
+  padding: 16px;
+  border: 3px solid purple;
+  border-radius: 8px;
+  background: #2d2d2d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+ 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+ 
+/* ===== GALERIA ===== */
+#galeria {
+  padding: 32px;
+}
+ 
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+ 
+.galeria img {
+  max-width: 100%;
+  flex-grow: 1;
+  height: auto;
+  border-radius: 4px;
+}
+ 
+/* ===== CONTACTO ===== */
+#contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+ 
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+ 
+#contacto label {
+  font-weight: 600;
+}
+ 
+#contacto input {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font: inherit;
+}
+ 
+#contacto button {
+  margin-top: 16px;
+  padding: 12px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+ 
+#contacto-form {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+ 
+#contacto-form.abierto {
+  max-height: 600px;
+}
+ 
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 16px;
+  background: #f5f5f5;
+}
+ 
+footer a {
+  display: inline-flex;
+  align-items: center;
+}
+ 
+.footer-legal {
+  margin-top: 16px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 13px;
+}
+ 
+.footer-legal a {
+  color: #7c5cbf;
+  text-decoration: none;
+}
+ 
+.footer-legal a:hover {
+  color: #5a3d9a;
+  text-decoration: underline;
+}
+ 
+/* ===== MODO OSCURO ===== */
 body.oscuro {
   background-color: #1a1a1a;
   color: #f0f0f0;
 }
-
+ 
 body.oscuro input,
 body.oscuro select,
 body.oscuro textarea {
@@ -35,12 +198,55 @@ body.oscuro textarea {
   color: #f0f0f0;
   border-color: #555;
 }
-
-#toggle-tema {
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  background: transparent;
-  font-size: 14px;
+ 
+body.oscuro footer {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+ 
+body.oscuro .footer-legal a {
+  color: #aaaaaa;
+}
+ 
+/* ===== TABLET (640px en adelante) ===== */
+@media (min-width: 640px) {
+  .cards {
+    flex-direction: row;
+  }
+ 
+  .card {
+    flex-basis: calc(50% - 8px);
+    flex-grow: 0;
+  }
+ 
+  .galeria img {
+    width: 48%;
+  }
+ 
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+ 
+/* ===== ESCRITORIO (1024px en adelante) ===== */
+@media (min-width: 1024px) {
+  #hero {
+    flex-direction: row;
+    text-align: left;
+  }
+ 
+  #hero img {
+    max-width: 50%;
+  }
+ 
+  .card {
+    flex-basis: 280px;
+    flex-grow: 1;
+  }
+ 
+  .galeria img {
+    width: 23%;
+  }
 }
